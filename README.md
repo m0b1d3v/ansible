@@ -1,2 +1,3 @@
-# ansible
-Desktop and server provisioning
+# Ansible
+
+Desktop and server provisioning.
