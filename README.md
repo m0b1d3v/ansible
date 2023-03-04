@@ -14,3 +14,20 @@ Notable exceptions to the best practices:
 Once upon a time all my provisioning code was done in Puppet!
 There were also some dark days were I did everything with manual checklists.
 
+## New server manual setup checklist
+
+```bash
+# Add provisioning user
+ssh <server>
+adduser <user>
+usermod -aG sudo <user>
+
+# Allow Ansible dry-run
+apt update
+apt upgrade
+apt install python-apt
+
+# Install SSH key
+exit
+ssh-copy-id <user>@<server>
+```
