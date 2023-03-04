@@ -32,3 +32,7 @@ local:
     installed: 1.19.2
     removed:
       - 1.18
+
+  nvm: 0.39.2
+
+  servers: [ ]

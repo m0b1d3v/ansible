@@ -11,3 +11,10 @@
     - local
   roles:
     - local-development
+
+# Non-root development environment setup
+- become: no
+  hosts:
+    - local
+  roles:
+    - local-users
