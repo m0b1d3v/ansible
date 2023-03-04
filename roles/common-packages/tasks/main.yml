@@ -1,0 +1,16 @@
+- name: Download and upgrade packages with updates
+  apt:
+    update_cache: true
+    upgrade: safe
+
+- name: Install common packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ all.apt.installed }}"
+
+- name: Remove common packages
+  apt:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ all.apt.removed }}"

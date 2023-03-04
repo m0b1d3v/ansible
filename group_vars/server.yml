@@ -1,0 +1,8 @@
+server:
+
+  apt:
+    installed:
+      - fail2ban
+      - ntp
+      - ufw
+    removed: [ ]

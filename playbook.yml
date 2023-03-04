@@ -1,0 +1,6 @@
+# Packages everything should have
+- become: yes
+  hosts:
+    - all
+  roles:
+    - common-packages

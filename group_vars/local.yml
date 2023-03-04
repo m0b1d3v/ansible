@@ -1,0 +1,29 @@
+local:
+
+  apt:
+    installed:
+      - build-essential
+      - ffmpeg
+      - firefox
+      - graphviz
+      - imagemagick
+      - inotify-tools
+      - jpegoptim
+      - keychain
+      - netcat
+      - optipng
+      - pandoc
+      - parallel
+      - pngquant
+      - rename
+      - sublime-merge
+      - sublime-text
+      - texlive-latex-recommended
+      - tree
+      - vim
+      - webp
+      - youtube-dl
+    removed:
+      - hugo
+      - golang
+      - neovim
