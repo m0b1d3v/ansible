@@ -1,0 +1,14 @@
+- name: Install development packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ local.apt.installed }}"
+
+- name: Remove development packages
+  apt:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ local.apt.removed }}"
+
+- name: Golang
+  include_tasks: go.yml

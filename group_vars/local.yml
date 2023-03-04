@@ -27,3 +27,8 @@ local:
       - hugo
       - golang
       - neovim
+
+  go:
+    installed: 1.19.2
+    removed:
+      - 1.18

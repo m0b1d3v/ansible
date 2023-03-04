@@ -1,0 +1,26 @@
+- name: Delete old installations of Go
+  file:
+    path: "/opt/go-{{ item }}"
+    state: absent
+  loop: "{{ local.go.removed }}"
+
+- name: Create install directory for Go
+  file:
+    state: directory
+    path: "/opt/go-{{ local.go.installed }}"
+
+- name: Check if Go install directory exists (for dry-run correctness)
+  stat:
+    path: "/opt/go-{{ local.go.installed }}"
+  register: goInstallDirectory
+
+# https://go.dev/doc/install
+- name: Install Go
+  unarchive:
+    src: "https://go.dev/dl/go{{ local.go.installed }}.linux-amd64.tar.gz"
+    creates: "/opt/go-{{ local.go.installed }}/bin"
+    dest: "/opt/go-{{ local.go.installed }}"
+    extra_opts:
+      - --strip-components=1
+    remote_src: yes
+  when: goInstallDirectory.stat.exists

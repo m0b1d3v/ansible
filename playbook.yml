@@ -4,3 +4,10 @@
     - all
   roles:
     - common-packages
+
+# Root development environment setup
+- become: yes
+  hosts:
+    - local
+  roles:
+    - local-development
