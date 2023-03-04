@@ -3,7 +3,6 @@
   shell: "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/{{ local.nvm }}/install.sh | bash"
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
-    warn: false
 
 # https://github.com/nvm-sh/nvm#long-term-support
 - name: Install Node LTS
