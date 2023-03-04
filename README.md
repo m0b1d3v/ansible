@@ -14,6 +14,23 @@ Notable exceptions to the best practices:
 Once upon a time all my provisioning code was done in Puppet!
 There were also some dark days were I did everything with manual checklists.
 
+## Setting up and running this project
+
+```shell
+# Install necessary packages
+sudo apt install git
+sudo apt install make
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+# Clone, test, and run
+GIT_SSH_COMMAND='ssh -i ~/.ssh/keyForGit' git clone git@github.com:mobi/ansible.git
+cd ansible
+make ansible-check
+make ansible
+```
+
 ## New server manual setup checklist
 
 ```bash
