@@ -1,0 +1,9 @@
+- name: Restart rsyslog
+  service:
+    state: restarted
+    name: rsyslog
+
+- name: Restart sshd
+  service:
+    state: restarted
+    name: sshd

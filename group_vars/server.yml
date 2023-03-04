@@ -6,3 +6,9 @@ server:
       - ntp
       - ufw
     removed: [ ]
+
+  ufw:
+    allowed:
+      - ssh
+      - http
+      - https

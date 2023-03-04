@@ -1,0 +1,13 @@
+- name: Set in-memory system hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
+
+- name: Set persistent system hostname
+  template:
+    dest: /etc/hostname
+    src:  hostname.j2
+
+- name: Add hostname mapping for DNS
+  blockinfile:
+    path: /etc/hosts
+    block: "127.0.0.1 localhost {{ inventory_hostname }} {{ inventory_hostname }}.mobiusk.com"

@@ -18,3 +18,10 @@
     - local
   roles:
     - local-users
+
+# Remote server setup
+- become: yes
+  hosts:
+    - server
+  roles:
+    - remote-server

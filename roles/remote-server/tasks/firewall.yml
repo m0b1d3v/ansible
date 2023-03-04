@@ -1,0 +1,17 @@
+- name: Allow ports in through firewall
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+  loop: "{{ server.ufw.allowed }}"
+
+- name: Stop duplication of ufw.log to kern.log
+  replace:
+    path: /etc/rsyslog.d/20-ufw.conf
+    regexp: "#(& stop)"
+    replace: '\1'
+  notify:
+    - Restart rsyslog
+
+- name: Enable the firewall
+  ufw:
+    state: enabled

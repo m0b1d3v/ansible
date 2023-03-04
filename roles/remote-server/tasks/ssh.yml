@@ -1,0 +1,10 @@
+- name: Disable remote root logins and force SSH key usage
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: "{{ item }}"
+    replace: '\1 no'
+  loop:
+    - "(PermitRootLogin) yes"
+    - "#(PasswordAuthentication) yes"
+  notify:
+    - Restart sshd
