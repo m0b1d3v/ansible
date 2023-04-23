@@ -21,10 +21,7 @@ local:
       - vim
       - webp
       - youtube-dl
-    removed:
-      - hugo
-      - golang
-      - neovim
+    removed: []
 
   go:
     installed: 1.20.2
