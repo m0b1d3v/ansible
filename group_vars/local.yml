@@ -23,7 +23,7 @@ local:
       - youtube-dl
     removed: []
 
-  go: 1.20.2
+  go: 1.20.3
 
   nvm: 0.39.2
 
