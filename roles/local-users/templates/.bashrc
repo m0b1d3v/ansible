@@ -10,7 +10,7 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 # Go
 
 export GOPATH=~/go
-export PATH=$PATH:$GOPATH/bin:/opt/go-{{ local.go.installed }}/bin
+export PATH=$PATH:$GOPATH/bin:/opt/go-{{ local.go }}/bin
 
 # NVM
 

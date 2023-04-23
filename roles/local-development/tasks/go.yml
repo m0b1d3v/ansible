@@ -1,25 +1,33 @@
+- name: Find any old installations of Go
+  find:
+    paths: "/opt"
+    file_type: directory
+    patterns: "go-*"
+    excludes: "go-{{ local.go }}"
+  register: old_go_versions
+
 - name: Delete old installations of Go
   file:
-    path: "/opt/go-{{ item }}"
+    path: "{{ item['path'] }}"
     state: absent
-  loop: "{{ local.go.removed }}"
+  with_items: "{{ old_go_versions['files'] }}"
 
 - name: Create install directory for Go
   file:
     state: directory
-    path: "/opt/go-{{ local.go.installed }}"
+    path: "/opt/go-{{ local.go }}"
 
 - name: Check if Go install directory exists (for dry-run correctness)
   stat:
-    path: "/opt/go-{{ local.go.installed }}"
+    path: "/opt/go-{{ local.go }}"
   register: goInstallDirectory
 
 # https://go.dev/doc/install
 - name: Install Go
   unarchive:
-    src: "https://go.dev/dl/go{{ local.go.installed }}.linux-amd64.tar.gz"
-    creates: "/opt/go-{{ local.go.installed }}/bin"
-    dest: "/opt/go-{{ local.go.installed }}"
+    src: "https://go.dev/dl/go{{ local.go }}.linux-amd64.tar.gz"
+    creates: "/opt/go-{{ local.go }}/bin"
+    dest: "/opt/go-{{ local.go }}"
     extra_opts:
       - --strip-components=1
     remote_src: yes
