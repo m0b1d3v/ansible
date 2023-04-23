@@ -16,8 +16,6 @@ local:
       - parallel
       - pngquant
       - rename
-      - sublime-merge
-      - sublime-text
       - texlive-latex-recommended
       - tree
       - vim
@@ -38,3 +36,7 @@ local:
   nvm: 0.39.2
 
   servers: [ ]
+
+  sublime:
+    merge: 2083
+    text: 4143

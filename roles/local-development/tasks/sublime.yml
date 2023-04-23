@@ -1,0 +1,7 @@
+- name: Sublime Text
+  apt:
+    deb: "https://download.sublimetext.com/sublime-text_build-{{ local.sublime.text }}_amd64.deb"
+
+- name: Sublime Merge
+  apt:
+    deb: "https://download.sublimetext.com/sublime-merge_build-{{ local.sublime.merge }}_amd64.deb"

@@ -12,3 +12,6 @@
 
 - name: Golang
   include_tasks: go.yml
+
+- name: Sublime
+  include_tasks: sublime.yml
