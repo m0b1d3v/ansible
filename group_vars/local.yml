@@ -25,7 +25,7 @@ local:
 
   go: 1.20.3
 
-  nvm: 0.39.2
+  nvm: 0.39.3
 
   servers: [ ]
 
