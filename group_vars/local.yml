@@ -11,6 +11,7 @@ local:
       - jpegoptim
       - keychain
       - netcat
+      - openjdk-17-jdk
       - optipng
       - pandoc
       - parallel

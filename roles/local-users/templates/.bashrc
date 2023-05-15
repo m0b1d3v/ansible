@@ -12,6 +12,10 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin:/opt/go-{{ local.go }}/bin
 
+# Java
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 # NVM
 
 export NVM_DIR="$HOME/.nvm"
