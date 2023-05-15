@@ -1,0 +1,31 @@
+- name: Find any old installations of Gradle
+  find:
+    paths: "/opt"
+    file_type: directory
+    patterns: "gradle-*"
+    excludes: "gradle-{{ local.gradle }}"
+  register: old_gradle_versions
+
+- name: Delete old installations of Gradle
+  file:
+    path: "{{ item['path'] }}"
+    state: absent
+  with_items: "{{ old_gradle_versions['files'] }}"
+
+- name: Create install directory for Gradle
+  file:
+    state: directory
+    path: "/opt/gradle-{{ local.gradle }}"
+
+- name: Check if Gradle install directory exists (for dry-run correctness)
+  stat:
+    path: "/opt/gradle-{{ local.gradle }}"
+  register: gradleInstallDirectory
+
+- name: Install Gradle
+  unarchive:
+    src: "https://downloads.gradle.org/distributions/gradle-{{ local.gradle }}-all.zip"
+    creates: "/opt/gradle-{{ local.gradle }}/bin"
+    dest: "/opt"
+    remote_src: yes
+  when: gradleInstallDirectory.stat.exists

@@ -10,6 +10,9 @@
     state: absent
   loop: "{{ local.apt.removed }}"
 
+- name: Gradle
+  include_tasks: gradle.yml
+
 - name: Golang
   include_tasks: go.yml
 
