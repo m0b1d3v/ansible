@@ -28,6 +28,8 @@ local:
 
   go: 1.20.3
 
+  maven: 3.9.1
+
   nvm: 0.39.3
 
   servers: [ ]

@@ -1,0 +1,33 @@
+- name: Find any old installations of Maven
+  find:
+    paths: "/opt"
+    file_type: directory
+    patterns: "maven-*"
+    excludes: "maven-{{ local.maven }}"
+  register: old_maven_versions
+
+- name: Delete old installations of Maven
+  file:
+    path: "{{ item['path'] }}"
+    state: absent
+  with_items: "{{ old_maven_versions['files'] }}"
+
+- name: Create install directory for Maven
+  file:
+    state: directory
+    path: "/opt/maven-{{ local.maven }}"
+
+- name: Check if Maven install directory exists (for dry-run correctness)
+  stat:
+    path: "/opt/maven-{{ local.maven }}"
+  register: mavenInstallDirectory
+
+- name: Install Maven
+  unarchive:
+    src: "https://dlcdn.apache.org/maven/maven-3/{{ local.maven }}/binaries/apache-maven-{{ local.maven }}-bin.tar.gz"
+    creates: "/opt/maven-{{ local.maven }}/bin"
+    dest: "/opt/maven-{{ local.maven }}"
+    extra_opts:
+      - --strip-components=1
+    remote_src: yes
+  when: mavenInstallDirectory.stat.exists

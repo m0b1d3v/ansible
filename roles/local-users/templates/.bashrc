@@ -20,6 +20,11 @@ export PATH=$PATH:/opt/gradle-{{ local.gradle }}/bin
 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
+# Maven
+
+export M2_HOME=/opt/maven-{{ local.maven }}
+export PATH=$PATH:/opt/maven-{{ local.maven }}/bin
+
 # NVM
 
 export NVM_DIR="$HOME/.nvm"

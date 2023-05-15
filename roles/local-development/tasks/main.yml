@@ -16,5 +16,8 @@
 - name: Golang
   include_tasks: go.yml
 
+- name: Maven
+  include_tasks: maven.yml
+
 - name: Sublime
   include_tasks: sublime.yml
