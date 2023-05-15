@@ -20,6 +20,11 @@ export PATH=$PATH:/opt/gradle-{{ local.gradle }}/bin
 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
+# Jetbrains
+
+export PATH=$PATH:/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}
+export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts
+
 # Maven
 
 export M2_HOME=/opt/maven-{{ local.maven }}

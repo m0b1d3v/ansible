@@ -1,0 +1,19 @@
+- name: Create install directory for Jetbrains Toolbox
+  file:
+    state: directory
+    path: "/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}"
+
+- name: Check if Jetbrains Toolbox install directory exists (for dry-run correctness)
+  stat:
+    path: "/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}"
+  register: jetbrainsToolboxInstallDirectory
+
+- name: Install Jetbrains Toolbox
+  unarchive:
+    src: "https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-{{ local.jetbrainsToolbox }}.tar.gz"
+    creates: "/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}/bin"
+    dest: "/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}"
+    extra_opts:
+      - --strip-components=1
+    remote_src: yes
+  when: jetbrainsToolboxInstallDirectory.stat.exists
