@@ -42,7 +42,6 @@ usermod -aG sudo <user>
 # Allow Ansible dry-run
 apt update
 apt upgrade
-apt install python-apt
 
 # Install SSH key
 exit
