@@ -33,7 +33,10 @@ local:
 
   nvm: 0.39.3
 
-  servers: [ ]
+  servers:
+    - name: vrsvp
+      key: ~/.ssh/id_vrsvp_server
+      ip: 139.144.51.202
 
   sublime:
     merge: 2083
