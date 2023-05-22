@@ -10,6 +10,7 @@ all:
       - htop
       - jq
       - make
+      - openjdk-17-jdk
       - rsync
       - screen
       - sqlite3
