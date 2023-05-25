@@ -1,0 +1,5 @@
+- name: Disable Caddy service
+  service:
+    name: caddy
+    enabled: false
+    state: stopped
