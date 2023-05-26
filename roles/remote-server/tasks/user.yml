@@ -4,6 +4,7 @@
     shell: /bin/bash
     groups:
       - adm
+      - caddy
       - sudo
       - systemd-journal
     append: yes

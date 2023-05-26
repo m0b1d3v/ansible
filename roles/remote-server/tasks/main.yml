@@ -16,11 +16,11 @@
 - name: Firewall
   include_tasks: firewall.yml
 
-- name: User
-  include_tasks: user.yml
-
 - name: SSH
   include_tasks: ssh.yml
 
 - name: Caddy
   include_tasks: caddy.yml
+
+- name: User
+  include_tasks: user.yml
