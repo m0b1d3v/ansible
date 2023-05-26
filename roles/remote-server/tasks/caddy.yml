@@ -1,0 +1,5 @@
+- name: Caddy service
+  service:
+    name: caddy
+    enabled: true
+    state: started
