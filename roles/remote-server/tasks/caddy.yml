@@ -1,3 +1,10 @@
+- name: Set Caddyfile
+  template:
+    dest: /etc/caddy/Caddyfile
+    src: Caddyfile.j2
+  notify:
+    - Reload caddy
+
 - name: Caddy service
   service:
     name: caddy
