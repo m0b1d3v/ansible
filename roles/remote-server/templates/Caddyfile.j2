@@ -1,3 +1,8 @@
+(static) {
+	file_server
+	templates
+}
+
 www.mobiusk.com {
 	redir https://mobiusk.com{uri}
 }
@@ -13,7 +18,12 @@ mobiusk.com {
 	}
 
 	root * /srv/portfolio/public
-	file_server
 	try_files {path} {path}.html {path}/index.html
-	templates
+	import static
+
+	# Invalid requests
+	handle_errors {
+		rewrite * /404.html
+		import static
+	}
 }
