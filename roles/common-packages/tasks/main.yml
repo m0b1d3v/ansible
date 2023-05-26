@@ -14,3 +14,6 @@
     name: "{{ item }}"
     state: absent
   loop: "{{ all.apt.removed }}"
+
+- name: Caddy
+  include_tasks: caddy.yml
