@@ -34,8 +34,8 @@ local:
   nvm: 0.39.3
 
   servers:
-    - name: vrsvp
-      key: ~/.ssh/id_vrsvp_server
+    - name: projects
+      key: ~/.ssh/id_projects_server
       ip: 139.144.51.202
 
   sublime:
