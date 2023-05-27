@@ -1,0 +1,13 @@
+- name: Service configuration
+  template:
+    dest: "/etc/systemd/system/vrsvp.service"
+    src: "vrsvp.j2"
+    mode: "640"
+  notify:
+    - Reload systemd
+
+- name: Service enabled
+  service:
+    name: vrsvp
+    enabled: true
+    state: started
