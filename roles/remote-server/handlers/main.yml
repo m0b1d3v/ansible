@@ -12,3 +12,7 @@
   service:
     state: reloaded
     name: caddy
+
+- name: Reload systemd
+  systemd:
+    daemon_reload: true
