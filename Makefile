@@ -1,18 +1,16 @@
-# Transparently calls other make targets without cluttering console
-subTask = @make --no-print-directory
-
-# When run with no arguments, `make` will just output the file contents
 default:
 	cat Makefile
 
-# Do a dry-run of Ansible to ensure nothing catastrophically unexpected happens
-ansible-check:
-	$(subTask) ansible flags="--check"
+secrets:
+	ansible-vault edit vault
 
-# Run Ansible
-ansible:
+check:
+	make run flags="--check"
+
+run:
 	ansible-playbook $(flags) \
-		--ask-become-pass \
+		--become-password-file secrets.pass \
+		--vault-password-file secrets.pass \
+		--extra-vars @vault \
 		--inventory inventory.ini \
-		--verbose \
 		playbook.yml

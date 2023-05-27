@@ -12,3 +12,6 @@ server:
       - ssh
       - http
       - https
+
+  vrsvp:
+    version: 1.1

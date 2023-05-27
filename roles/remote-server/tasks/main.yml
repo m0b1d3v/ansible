@@ -22,5 +22,8 @@
 - name: Caddy
   include_tasks: caddy.yml
 
+- name: VRSVP
+  include_tasks: vrsvp.yml
+
 - name: User
   include_tasks: user.yml
