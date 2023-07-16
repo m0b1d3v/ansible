@@ -19,6 +19,9 @@
 - name: SSH
   include_tasks: ssh.yml
 
+- name: Directories
+  include_tasks: directories.yml
+
 - name: Caddy
   include_tasks: caddy.yml
 

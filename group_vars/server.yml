@@ -7,6 +7,15 @@ server:
       - ufw
     removed: [ ]
 
+  directories:
+    private:
+      - '/srv/portfolio'
+      - '/srv/vrsvp'
+      - '/srv/vrsvp/logs'
+      - '/srv/vrsvp/private'
+    public:
+      - '/srv/portfolio/public'
+
   ufw:
     allowed:
       - ssh

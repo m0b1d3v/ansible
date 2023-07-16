@@ -1,0 +1,15 @@
+- name: Private directories
+  file:
+    group: "{{ ansible_env.SUDO_USER }}"
+    owner: "{{ ansible_env.SUDO_USER }}"
+    path: "{{ item }}"
+    state: directory
+  loop: "{{ server.directories.private }}"
+
+- name: Public directories
+  file:
+    group: "caddy"
+    owner: "{{ ansible_env.SUDO_USER }}"
+    path: "{{ item }}"
+    state: directory
+  loop: "{{ server.directories.public }}"
