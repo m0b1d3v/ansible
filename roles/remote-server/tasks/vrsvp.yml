@@ -11,3 +11,10 @@
     name: vrsvp
     enabled: true
     state: started
+
+- name: Log backup for auditing
+  cron:
+    name: VRSVP audit logging
+    minute: 0
+    hour: 0
+    job: "journalctl --no-pager --output cat --unit vrsvp --since yesterday --until today > /srv/vrsvp/logs/$(date --date yesterday +\\%Y-\\%m-\\%d).txt"
