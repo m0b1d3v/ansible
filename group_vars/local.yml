@@ -35,7 +35,6 @@ local:
 
   servers:
     - name: projects
-      key: ~/.ssh/id_projects_server
       ip: 139.144.51.202
 
   sublime:
