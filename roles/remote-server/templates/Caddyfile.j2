@@ -11,6 +11,17 @@ mobiusk.com {
 
 	# Network compression
 	encode zstd gzip
+
+	# Security headers
+	header {
+		Content-Security-Policy "default-src 'self';"
+		Permissions-Policy interest-cohort=()
+		Referrer-Policy no-referrer-when-downgrade
+		Strict-Transport-Security max-age=31536000;
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+	}
+
 	# Redirects to external sites
 	redir /discord https://discordapp.com/users/143888967253622784
 	redir /twitter https://twitter.com/hi_im_mobi
