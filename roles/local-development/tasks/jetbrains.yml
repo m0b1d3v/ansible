@@ -10,7 +10,7 @@
 
 - name: Install Jetbrains Toolbox
   unarchive:
-    src: "https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-{{ local.jetbrainsToolbox }}.tar.gz"
+    src: "https://download.jetbrains.com/toolbox/jetbrains-toolbox-{{ local.jetbrainsToolbox }}.tar.gz"
     creates: "/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}/bin"
     dest: "/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}"
     extra_opts:

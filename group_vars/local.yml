@@ -27,11 +27,11 @@ local:
 
   go: 1.20.3
 
-  jetbrainsToolbox: 1.28.1.15219
+  jetbrainsToolbox: 2.0.2.16660
 
-  maven: 3.9.1
+  maven: 3.9.4
 
-  nvm: 0.39.3
+  nvm: v0.39.4
 
   servers:
     - name: projects

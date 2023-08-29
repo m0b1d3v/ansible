@@ -24,7 +24,7 @@
 
 - name: Install Maven
   unarchive:
-    src: "https://dlcdn.apache.org/maven/maven-3/{{ local.maven }}/binaries/apache-maven-{{ local.maven }}-bin.tar.gz"
+    src: "https://archive.apache.org/dist/maven/maven-3/{{ local.maven }}/binaries/apache-maven-{{ local.maven }}-bin.tar.gz"
     creates: "/opt/maven-{{ local.maven }}/bin"
     dest: "/opt/maven-{{ local.maven }}"
     extra_opts:
