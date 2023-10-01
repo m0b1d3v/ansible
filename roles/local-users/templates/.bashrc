@@ -18,6 +18,7 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # Jetbrains
 
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/bin
+export PATH=$PATH:/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts
 
 # NVM
