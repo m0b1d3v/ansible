@@ -16,14 +16,5 @@
 - name: Gradle
   include_tasks: gradle.yml
 
-- name: Golang
-  include_tasks: go.yml
-
 - name: Jetbrains
   include_tasks: jetbrains.yml
-
-- name: Maven
-  include_tasks: maven.yml
-
-- name: Sublime
-  include_tasks: sublime.yml
