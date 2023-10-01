@@ -3,11 +3,11 @@
 	templates
 }
 
-www.mobiusk.com {
-	redir https://mobiusk.com{uri}
+mobiusk.com, www.mobiusk.com, www.m0b1.dev {
+	redir https://m0b1.dev{uri}
 }
 
-mobiusk.com {
+m0b1.dev {
 
 	# Network compression
 	encode zstd gzip
@@ -23,7 +23,7 @@ mobiusk.com {
 	}
 
 	# Redirects to external sites
-	redir /bluesky https://bsky.app/profile/mobiusk.com
+	redir /bluesky https://bsky.app/profile/m0b1.dev
 	redir /discord https://discordapp.com/users/143888967253622784
 	redir /twitter https://twitter.com/hi_im_mobi
 	redir /vrchat https://vrchat.com/home/user/usr_9da6843d-5203-474b-be08-d723ade92e19
@@ -31,19 +31,8 @@ mobiusk.com {
 	# Redirects for Git projects
 	route /git* {
 		uri strip_prefix /git
-		redir https://github.com/mobiusk{uri}
+		redir https://github.com/m0b1d3v{uri}
 	}
-
-	# Redirects for Google Photo albums
-	route /redirect/photos/* {
-		uri strip_prefix /redirect/photos/
-		redir https://photos.app.goo.gl/{uri}
-	}
-
-	# Redirects for moved pages
-	redir /code/research* /projects/code-research
-	redir /code/vrsvp* /projects/vrsvp
-	redir /vrchat/gallery* /projects/vrchat/gallery
 
 	# File serving
 	root * /srv/portfolio/public

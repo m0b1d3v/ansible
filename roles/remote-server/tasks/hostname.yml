@@ -10,4 +10,4 @@
 - name: Add hostname mapping for DNS
   blockinfile:
     path: /etc/hosts
-    block: "127.0.0.1 localhost {{ inventory_hostname }} {{ inventory_hostname }}.mobiusk.com"
+    block: "127.0.0.1 localhost {{ inventory_hostname }} {{ inventory_hostname }}.m0b1.dev"
