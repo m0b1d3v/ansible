@@ -23,11 +23,11 @@ local:
       - youtube-dl
     removed: []
 
-  gradle: 8.1.1
+  gradle: 8.3
 
-  jetbrainsToolbox: 2.0.2.16660
+  jetbrainsToolbox: 2.0.4.17212
 
-  nvm: v0.39.4
+  nvm: v0.39.5
 
   servers:
     - name: projects
