@@ -2,10 +2,6 @@
 
 Desktop and server provisioning.
 
-Currently only desktop provisioning is run from this repository.
-All of my remote servers for Git, Minecraft, DnD Foundry, testing, and websites have been sunset.
-(Un)fortunately it is easier to spend my money on hosted platforms than it is to spend my time on servers right now.
-
 The directory layout of all my Ansible code comes from [best practice suggestions](https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html#directory-layout).
 Notable exceptions to the best practices:
 - The master playbook is named `playbook.yml` instead of `site.yml` to be more explicit
