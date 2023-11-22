@@ -15,5 +15,17 @@
     state: absent
   loop: "{{ all.apt.removed }}"
 
+- name: Install common deb
+  apt:
+    deb: "{{ item }}"
+    state: present
+  loop: "{{ all.deb.installed }}"
+
+- name: Remove common deb
+  apt:
+    deb: "{{ item }}"
+    state: absent
+  loop: "{{ all.deb.removed }}"
+
 - name: Caddy
   include_tasks: caddy.yml

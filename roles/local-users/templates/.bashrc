@@ -11,10 +11,6 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
 export PATH=$PATH:/opt/gradle-{{ local.gradle }}/bin
 
-# Java
-
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-
 # Jetbrains
 
 export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/bin
