@@ -13,8 +13,5 @@
 - name: Caddy
   include_tasks: caddy.yml
 
-- name: Gradle
-  include_tasks: gradle.yml
-
 - name: Jetbrains
   include_tasks: jetbrains.yml
