@@ -20,12 +20,5 @@ local:
       - vim
       - webp
       - youtube-dl
-    removed: []
-
-  nvm: v0.39.5
-
-  servers:
-    - name: projects
-      ip: 139.144.51.202
     removed:
       - firefox
