@@ -4,7 +4,6 @@ local:
     installed:
       - build-essential
       - ffmpeg
-      - firefox
       - graphviz
       - imagemagick
       - inotify-tools
@@ -32,3 +31,5 @@ local:
   servers:
     - name: projects
       ip: 139.144.51.202
+    removed:
+      - firefox

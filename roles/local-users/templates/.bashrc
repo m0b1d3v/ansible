@@ -7,16 +7,6 @@ fi
 
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
-# Gradle
-
-export PATH=$PATH:/opt/gradle-{{ local.gradle }}/bin
-
-# Jetbrains
-
-export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/bin
-export PATH=$PATH:/opt/jetbrains-toolbox-{{ local.jetbrainsToolbox }}
-export PATH=$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts
-
 # NVM
 
 export NVM_DIR="$HOME/.nvm"
