@@ -22,8 +22,6 @@ local:
       - youtube-dl
     removed: []
 
-  jetbrainsToolbox: 2.0.4.17212
-
   nvm: v0.39.5
 
   servers:

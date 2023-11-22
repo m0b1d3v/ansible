@@ -12,6 +12,3 @@
 
 - name: Caddy
   include_tasks: caddy.yml
-
-- name: Jetbrains
-  include_tasks: jetbrains.yml
