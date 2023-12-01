@@ -1,0 +1,21 @@
+[Unit]
+Description=Mighty Metrics
+Requires=network.target
+
+[Service]
+Environment="APPLICATION_WEBHOOK_AVATAR={{ secret.mightyMetrics.avatar }}"
+Environment="APPLICATION_WEBHOOK_DESTINATION={{ secret.mightyMetrics.webhook }}"
+Environment="GOOGLE_APPLICATION_CREDENTIALS=/srv/mighty-metrics/private/application_default_credentials.json"
+Environment="SENTRY_DSN={{ secret.mightyMetrics.sentry }}"
+Environment="SERVER_PORT={{ server.mightyMetrics.port }}"
+Environment="SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_DISCORD_CLIENTID={{ secret.mightyMetrics.client }}"
+Environment="SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_DISCORD_SECRET={{ secret.mightyMetrics.secret }}"
+Environment="SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_DISCORD_REDIRECTURI=https://mighty.m0b1.dev/login/oauth2/code/discord"
+Environment="JAVA_OPTS=--enable-preview"
+
+WorkingDirectory=/srv/mighty-metrics/private
+
+ExecStart=/srv/mighty-metrics/private/mighty-metrics-boot-{{ server.mightyMetrics.version }}/bin/mighty-metrics
+
+[Install]
+WantedBy=multi-user.target

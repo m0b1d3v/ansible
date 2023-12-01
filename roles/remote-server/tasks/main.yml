@@ -25,6 +25,9 @@
 - name: Caddy
   include_tasks: caddy.yml
 
+- name: Mighty Metrics
+  include_tasks: mighty-metrics.yml
+
 - name: VRSVP
   include_tasks: vrsvp.yml
 

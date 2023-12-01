@@ -1,0 +1,21 @@
+- name: Service configuration
+  template:
+    dest: "/etc/systemd/system/mighty-metrics.service"
+    src: "mighty-metrics.j2"
+    mode: "644"
+  notify:
+    - Reload systemd
+
+- name: Service enabled
+  service:
+    name: mighty-metrics
+    enabled: true
+    state: started
+  when: not ansible_check_mode
+
+- name: Log backup for auditing
+  cron:
+    name: Mighty metrics audit logging
+    minute: 0
+    hour: 0
+    job: "journalctl --no-pager --output cat --unit mighty-metrics --since yesterday --until today > /srv/mighty-metrics/logs/$(date --date yesterday +\\%Y-\\%m-\\%d).txt"

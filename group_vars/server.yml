@@ -9,6 +9,9 @@ server:
 
   directories:
     private:
+      - '/srv/mighty-metrics'
+      - '/srv/mighty-metrics/logs'
+      - '/srv/mighty-metrics/private'
       - '/srv/portfolio'
       - '/srv/vrsvp'
       - '/srv/vrsvp/logs'
@@ -21,6 +24,10 @@ server:
       - ssh
       - http
       - https
+
+  mightyMetrics:
+    port: 10000
+    version: 1.0b
 
   vrsvp:
     version: 1.5
