@@ -1,0 +1,12 @@
+secret:
+  vrsvp:
+    avatar:
+    bot:
+    sentry:
+    webhook:
+  mighty-metrics:
+  	avatar:
+  	client:
+  	secret:
+    sentry:
+	webhook:
