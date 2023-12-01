@@ -14,8 +14,7 @@ all:
       - screen
       - sqlite3
       - zip
-    removed:
-      - openjdk-17-jdk
+    removed: []
 
   deb:
     installed:
