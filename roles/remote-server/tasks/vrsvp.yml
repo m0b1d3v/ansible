@@ -2,7 +2,7 @@
   template:
     dest: "/etc/systemd/system/vrsvp.service"
     src: "vrsvp.j2"
-    mode: "640"
+    mode: "644"
   notify:
     - Reload systemd
 
