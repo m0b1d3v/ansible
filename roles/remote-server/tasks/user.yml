@@ -12,4 +12,4 @@
 - name: SSH key for personal user account
   authorized_key:
     user: "{{ ansible_env.SUDO_USER }}"
-    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    key: "{{ lookup('file', '~/.ssh/id_ed25519.pub') }}"
