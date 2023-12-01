@@ -9,8 +9,8 @@ check:
 
 run:
 	ansible-playbook $(flags) \
-		--become-password-file secrets.pass \
-		--vault-password-file secrets.pass \
+		--ask-become-pass \
+		--ask-vault-password \
 		--extra-vars @vault \
 		--inventory inventory.ini \
 		playbook.yml
