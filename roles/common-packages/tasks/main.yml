@@ -26,6 +26,3 @@
     deb: "{{ item }}"
     state: absent
   loop: "{{ all.deb.removed }}"
-
-- name: Caddy
-  include_tasks: caddy.yml

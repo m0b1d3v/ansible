@@ -3,7 +3,7 @@
     dest: /etc/caddy/Caddyfile
     src: Caddyfile.j2
   notify:
-    - Reload caddy
+    - reload
 
 - name: Caddy service
   service:
