@@ -11,11 +11,11 @@
   hosts:
     - local
   roles:
-    - local-users
+    - local
 
 # Remote server setup
 - become: yes
   hosts:
     - server
   roles:
-    - remote-server
+    - server
