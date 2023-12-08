@@ -1,15 +1,3 @@
-- name: Install server packages
-  apt:
-    name: "{{ item }}"
-    state: present
-  loop: "{{ server.apt.installed }}"
-
-- name: Remove server packages
-  apt:
-    name: "{{ item }}"
-    state: absent
-  loop: "{{ server.apt.removed }}"
-
 - name: Hostname
   include_tasks: hostname.yml
 

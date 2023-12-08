@@ -3,15 +3,8 @@
   hosts:
     - all
   roles:
-    - common-packages
+    - apt
     - caddy
-
-# Root development environment setup
-- become: yes
-  hosts:
-    - local
-  roles:
-    - local-development
 
 # Non-root development environment setup
 - become: no

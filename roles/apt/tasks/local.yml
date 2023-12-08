@@ -1,10 +1,10 @@
-- name: Install development packages
+- name: Install packages
   apt:
     name: "{{ item }}"
     state: present
   loop: "{{ local.apt.installed }}"
 
-- name: Remove development packages
+- name: Remove packages
   apt:
     name: "{{ item }}"
     state: absent
