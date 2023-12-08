@@ -1,12 +1,12 @@
 - name: SSH config
   template:
     dest: "{{ ansible_env.HOME }}/.ssh/config"
-    src: ".ssh/config.j2"
+    src: "ssh_config.j2"
 
 - name: Bash config
-  blockinfile:
-    dest: "{{ ansible_env.HOME }}/.bashrc"
-    block: "{{ lookup('template', '.bashrc') }}"
+  template:
+    dest: "{{ ansible_env.HOME }}/.bash_aliases"
+    src: "bashrc_additions.j2"
 
 - name: Node
   include_tasks: node.yml

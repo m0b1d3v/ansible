@@ -1,4 +1,5 @@
 secret:
+  sonarToken:
   vrsvp:
     avatar:
     bot:
