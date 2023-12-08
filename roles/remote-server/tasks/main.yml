@@ -11,10 +11,12 @@
   include_tasks: directories.yml
 
 - name: Mighty Metrics
-  include_tasks: mighty-metrics.yml
+  import_tasks: mighty-metrics.yml
+  tags: mighty-metrics
 
 - name: VRSVP
-  include_tasks: vrsvp.yml
+  import_tasks: vrsvp.yml
+  tags: vrsvp
 
 - name: User
   include_tasks: user.yml
