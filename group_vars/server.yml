@@ -30,4 +30,5 @@ server:
     version: 1.0b
 
   vrsvp:
-    version: 1.5
+    port: 10001
+    version: 1.6

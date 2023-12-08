@@ -10,7 +10,7 @@ Environment="SENTRY_DSN={{ secret.vrsvp.sentry }}"
 Environment="SERVER_PORT={{ server.vrsvp.port }}"
 Environment="JAVA_OPTS=--enable-preview"
 
-ExecStart=/srv/vrsvp/private/vrsvp-{{ server.vrsvp.version }}/bin/vrsvp
+ExecStart=/srv/vrsvp/private/vrsvp-boot-{{ server.vrsvp.version }}/bin/vrsvp
 
 [Install]
 WantedBy=multi-user.target
