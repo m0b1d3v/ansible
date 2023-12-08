@@ -4,8 +4,8 @@
 - name: Firewall
   include_tasks: firewall.yml
 
-- name: SSH
-  include_tasks: ssh.yml
+- name: SSHD
+  include_tasks: sshd.yml
 
 - name: Directories
   include_tasks: directories.yml

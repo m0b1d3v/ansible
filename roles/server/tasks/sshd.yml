@@ -1,0 +1,7 @@
+- name: Disable remote root logins and force SSH key usage
+  template:
+    dest: /etc/ssh/sshd_config.d/overrides.conf
+    src: "sshd_config_overrides.j2"
+    mode: "644"
+  notify:
+    - Restart sshd
