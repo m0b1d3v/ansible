@@ -13,4 +13,5 @@ run:
 		--ask-vault-password \
 		--extra-vars @vault \
 		--inventory inventory.ini \
+		$(if $(tag),--tags $(tag),) \
 		playbook.yml

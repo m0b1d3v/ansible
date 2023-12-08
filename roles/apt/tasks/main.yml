@@ -3,29 +3,28 @@
     update_cache: true
     upgrade: safe
 
-- name: Install common packages
+- name: Install packages
   apt:
     name: "{{ item }}"
     state: present
   loop: "{{ all.apt.installed }}"
 
-- name: Remove common packages
+- name: Remove packages
   apt:
     name: "{{ item }}"
     state: absent
   loop: "{{ all.apt.removed }}"
 
-- name: Install common deb
+- name: Install deb
   apt:
     deb: "{{ item }}"
     state: present
-  loop: "{{ all.deb.installed }}"
+  loop: "{{ all.deb }}"
 
-- name: Remove common deb
-  apt:
-    deb: "{{ item }}"
-    state: absent
-  loop: "{{ all.deb.removed }}"
+- name: Local
+  include_tasks: local.yml
+  when: inventory_hostname in groups["local"]
 
-- name: Caddy
-  include_tasks: caddy.yml
+- name: Server
+  include_tasks: server.yml
+  when: inventory_hostname in groups["server"]

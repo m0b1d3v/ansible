@@ -17,7 +17,4 @@ all:
     removed: []
 
   deb:
-    installed:
-      - https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
-      - https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
-    removed: []
+    - https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb

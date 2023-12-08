@@ -3,25 +3,19 @@
   hosts:
     - all
   roles:
-    - common-packages
-
-# Root development environment setup
-- become: yes
-  hosts:
-    - local
-  roles:
-    - local-development
+    - apt
+    - caddy
 
 # Non-root development environment setup
 - become: no
   hosts:
     - local
   roles:
-    - local-users
+    - local
 
 # Remote server setup
 - become: yes
   hosts:
     - server
   roles:
-    - remote-server
+    - server

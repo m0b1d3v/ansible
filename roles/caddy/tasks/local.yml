@@ -1,4 +1,4 @@
-- name: Disable Caddy service
+- name: Caddy service
   service:
     name: caddy
     enabled: false

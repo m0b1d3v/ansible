@@ -13,3 +13,11 @@
   apt:
     name: caddy
     state: present
+
+- name: Local
+  include_tasks: local.yml
+  when: inventory_hostname in groups["local"]
+
+- name: Server
+  include_tasks: server.yml
+  when: inventory_hostname in groups["server"]

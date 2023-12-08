@@ -8,11 +8,6 @@
     state: restarted
     name: sshd
 
-- name: Reload caddy
-  service:
-    state: reloaded
-    name: caddy
-
 - name: Reload systemd
   systemd:
     daemon_reload: true
