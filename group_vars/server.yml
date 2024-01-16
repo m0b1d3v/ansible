@@ -9,9 +9,6 @@ server:
 
   directories:
     private:
-      - '/srv/mighty-metrics'
-      - '/srv/mighty-metrics/logs'
-      - '/srv/mighty-metrics/private'
       - '/srv/portfolio'
       - '/srv/vrsvp'
       - '/srv/vrsvp/logs'
@@ -25,9 +22,7 @@ server:
       - http
       - https
 
-  mightyMetrics:
-    port: 10000
-    version: 1.0b
+  # Mighty metrics has been removed, it held port 10,000
 
   vrsvp:
     port: 10001

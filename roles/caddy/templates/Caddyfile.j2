@@ -7,14 +7,6 @@ mobiusk.com, www.mobiusk.com, www.m0b1.dev {
 	redir https://m0b1.dev{uri}
 }
 
-mighty.m0b1.dev {
-
-	# Network compression
-	encode zstd gzip
-
-	reverse_proxy localhost:10000
-}
-
 vrsvp.m0b1.dev {
 	reverse_proxy localhost:10001
 }
