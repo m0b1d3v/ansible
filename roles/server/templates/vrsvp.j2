@@ -4,8 +4,7 @@ Requires=network.target
 
 [Service]
 Environment="APPLICATION_DISCORD_BOTSECRETTOKEN={{ secret.vrsvp.bot }}"
-Environment="APPLICATION_DISCORD_WEBHOOK_AVATAR={{ secret.vrsvp.avatar }}"
-Environment="APPLICATION_DISCORD_WEBHOOK_DESTINATION={{ secret.vrsvp.webhook }}"
+Environment="APPLICATION_DISCORD_LOGWEBHOOK={{ secret.vrsvp.webhook }}"
 Environment="SENTRY_DSN={{ secret.vrsvp.sentry }}"
 Environment="SERVER_PORT={{ server.vrsvp.port }}"
 Environment="JAVA_OPTS=--enable-preview"

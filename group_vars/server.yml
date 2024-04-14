@@ -26,4 +26,4 @@ server:
 
   vrsvp:
     port: 10001
-    version: 1.6
+    version: 1.7
