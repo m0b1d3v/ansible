@@ -5,14 +5,11 @@ server:
       - fail2ban
       - ntp
       - ufw
-    removed: [ ]
+    removed: []
 
   directories:
     private:
       - '/srv/portfolio'
-      - '/srv/vrsvp'
-      - '/srv/vrsvp/logs'
-      - '/srv/vrsvp/private'
     public:
       - '/srv/portfolio/public'
 
@@ -21,9 +18,3 @@ server:
       - ssh
       - http
       - https
-
-  # Mighty metrics has been removed, it held port 10,000
-
-  vrsvp:
-    port: 10001
-    version: 1.7

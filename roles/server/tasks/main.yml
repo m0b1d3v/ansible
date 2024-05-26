@@ -10,9 +10,5 @@
 - name: Directories
   include_tasks: directories.yml
 
-- name: VRSVP
-  import_tasks: vrsvp.yml
-  tags: vrsvp
-
 - name: User
   include_tasks: user.yml
