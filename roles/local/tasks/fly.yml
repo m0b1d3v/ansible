@@ -1,0 +1,5 @@
+# https://fly.io/docs/hands-on/install-flyctl/#linux
+- name: Download Fly installer
+  shell: "curl -L https://fly.io/install.sh | sh"
+  args:
+    creates: "{{ ansible_env.HOME }}/.fly/bin/fly"

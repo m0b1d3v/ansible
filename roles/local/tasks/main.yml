@@ -8,5 +8,8 @@
     dest: "{{ ansible_env.HOME }}/.bash_aliases"
     src: "bashrc_additions.j2"
 
+- name: Fly
+  include_tasks: fly.yml
+
 - name: Node
   include_tasks: node.yml
