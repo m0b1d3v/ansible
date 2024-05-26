@@ -8,10 +8,8 @@ server:
     removed: []
 
   directories:
-    private:
-      - '/srv/portfolio'
-    public:
-      - '/srv/portfolio/public'
+    private: []
+    public: []
 
   ufw:
     allowed:

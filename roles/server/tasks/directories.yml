@@ -8,7 +8,7 @@
 
 - name: Public directories
   file:
-    group: "caddy"
+    group: "{{ ansible_env.SUDO_USER }}"
     owner: "{{ ansible_env.SUDO_USER }}"
     path: "{{ item }}"
     state: directory

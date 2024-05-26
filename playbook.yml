@@ -4,7 +4,6 @@
     - all
   roles:
     - apt
-    - caddy
 
 # Non-root development environment setup
 - become: no
