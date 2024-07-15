@@ -23,7 +23,7 @@ sudo apt install ansible
 # Clone, test, and run
 GIT_SSH_COMMAND='ssh -i ~/.ssh/keyForGit' git clone git@github.com:m0b1d3v/ansible.git
 cd ansible
-make ansible-check
+make check
 make ansible
 ```
 
