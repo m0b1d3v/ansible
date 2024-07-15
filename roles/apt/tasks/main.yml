@@ -7,13 +7,7 @@
   apt:
     name: "{{ item }}"
     state: present
-  loop: "{{ all.apt.installed }}"
-
-- name: Remove packages
-  apt:
-    name: "{{ item }}"
-    state: absent
-  loop: "{{ all.apt.removed }}"
+  loop: "{{ all.apt }}"
 
 - name: Install deb
   apt:

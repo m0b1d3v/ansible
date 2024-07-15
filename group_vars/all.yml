@@ -1,20 +1,17 @@
 all:
 
   apt:
-    installed:
-      - curl
-      - dos2unix
-      - git
-      - git-lfs
-      - glances
-      - htop
-      - jq
-      - make
-      - rsync
-      - screen
-      - sqlite3
-      - zip
-    removed: []
+    - curl
+    - dos2unix
+    - git
+    - git-lfs
+    - glances
+    - htop
+    - jq
+    - make
+    - rsync
+    - screen
+    - sqlite3
+    - zip
 
-  deb:
-    - https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
+  deb: []

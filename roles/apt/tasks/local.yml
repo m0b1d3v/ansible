@@ -2,10 +2,4 @@
   apt:
     name: "{{ item }}"
     state: present
-  loop: "{{ local.apt.installed }}"
-
-- name: Remove packages
-  apt:
-    name: "{{ item }}"
-    state: absent
-  loop: "{{ local.apt.removed }}"
+  loop: "{{ local.apt }}"

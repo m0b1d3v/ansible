@@ -1,24 +1,3 @@
 local:
 
-  apt:
-    installed:
-      - build-essential
-      - ffmpeg
-      - graphviz
-      - imagemagick
-      - inotify-tools
-      - jpegoptim
-      - keychain
-      - netcat
-      - optipng
-      - pandoc
-      - parallel
-      - pngquant
-      - rename
-      - texlive-latex-recommended
-      - tree
-      - vim
-      - webp
-      - youtube-dl
-    removed:
-      - firefox
+  apt: []
