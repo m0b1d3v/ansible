@@ -1,6 +1,6 @@
 # https://github.com/nvm-sh/nvm#installing-and-updating
 - name: Download NVM installer
-  shell: "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash"
+  shell: "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash"
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
 
