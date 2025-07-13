@@ -30,3 +30,4 @@ local:
   snap:
     - { name: intellij-idea-ultimate, classic: true }
     - { name: rider, classic: true }
+    - { name: spotify }
