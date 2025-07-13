@@ -1,0 +1,14 @@
+- name: Manage flatpak remotes on local machines
+  flatpak_remote:
+    name: "{{ item.name }}"
+    flatpakrepo_url: "{{ item.url }}"
+    method: user
+    state: "{{ item.state | default ('present') }}"
+  loop: "{{ local.flatpak_remote }}"
+
+- name: Manage flatpaks on local machines
+  flatpak:
+    name: "{{ item.name }}"
+    method: user
+    state: "{{ item.state | default ('present') }}"
+  loop: "{{ local.flatpak }}"

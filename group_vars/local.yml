@@ -1,6 +1,7 @@
 local:
 
   apt:
+    - name: flatpak
     - name: mullvad-vpn
   apt_key:
     - url: https://repository.mullvad.net/deb/mullvad-keyring.asc
@@ -8,4 +9,9 @@ local:
 
   apt_repository:
     - name: "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=amd64] https://repository.mullvad.net/deb/stable stable main"
+
+  flatpak_remote:
+    - { name: flathub, url: https://dl.flathub.org/repo/flathub.flatpakrepo }
+
+  flatpak: []
 

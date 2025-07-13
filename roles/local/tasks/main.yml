@@ -1,6 +1,8 @@
 - name: Configs
   include_tasks: configs.yml
 
+- name: Flatpak
+  include_tasks: flatpak.yml
 
 - name: Fly
   include_tasks: fly.yml
