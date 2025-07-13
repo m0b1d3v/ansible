@@ -1,0 +1,7 @@
+- name: Manage snaps on local machines
+  snap:
+    name: "{{ item.name }}"
+    classic: "{{ item.classic | default(false) | bool }}"
+    state: "{{ item.state | default ('present') }}"
+  loop: "{{ local.snap }}"
+  become: yes

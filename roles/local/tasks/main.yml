@@ -9,3 +9,6 @@
 
 - name: Node
   include_tasks: node.yml
+
+- name: Snap
+  include_tasks: snap.yml

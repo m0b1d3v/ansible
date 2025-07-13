@@ -27,3 +27,6 @@ local:
   flatpak:
     - name: org.keepassxc.KeePassXC
 
+  snap:
+    - { name: intellij-idea-ultimate, classic: true }
+    - { name: rider, classic: true }
