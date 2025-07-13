@@ -1,0 +1,2 @@
+# Automatic line endings on checkout and commit for those without core.autocrlf
+* text=auto
