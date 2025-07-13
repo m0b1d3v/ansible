@@ -1,17 +1,17 @@
 all:
 
   apt:
-    - curl
-    - dos2unix
-    - git
-    - git-lfs
-    - glances
-    - htop
-    - jq
-    - make
-    - rsync
-    - screen
-    - sqlite3
-    - zip
 
   deb: []
+    - name: curl
+    - name: dos2unix
+    - name: git
+    - name: git-lfs
+    - name: glances
+    - name: htop
+    - name: jq
+    - name: make
+    - name: rsync
+    - name: screen
+    - name: sqlite3
+    - name: zip

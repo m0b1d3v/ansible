@@ -1,0 +1,10 @@
+- name: Download and upgrade packages with updates
+  apt:
+    update_cache: true
+    upgrade: safe
+
+- name: Manage packages with apt on all machines
+  apt:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default ('present') }}"
+  loop: "{{ all.apt }}"

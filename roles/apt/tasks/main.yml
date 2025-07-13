@@ -1,19 +1,11 @@
-- name: Download and upgrade packages with updates
-  apt:
-    update_cache: true
-    upgrade: safe
-
-- name: Install packages
-  apt:
-    name: "{{ item }}"
-    state: present
-  loop: "{{ all.apt }}"
 
 - name: Install deb
   apt:
     deb: "{{ item }}"
     state: present
   loop: "{{ all.deb }}"
+- name: All
+  include_tasks: all.yml
 
 - name: Local
   include_tasks: local.yml
