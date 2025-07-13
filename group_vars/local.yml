@@ -3,11 +3,17 @@ local:
   apt:
     - name: flatpak
     - name: mullvad-vpn
+    - name: syncthing
   apt_key:
+
+    - url: https://syncthing.net/release-key.gpg
+      dest: /etc/apt/keyrings/syncthing-archive-keyring.gpg
+
     - url: https://repository.mullvad.net/deb/mullvad-keyring.asc
       dest: /usr/share/keyrings/mullvad-keyring.asc
 
   apt_repository:
+    - name: "deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable"
     - name: "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=amd64] https://repository.mullvad.net/deb/stable stable main"
 
   flatpak_remote:
