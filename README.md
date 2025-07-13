@@ -14,15 +14,12 @@ There were also some dark days were I did everything with manual checklists.
 
 ```shell
 # Install necessary packages
-sudo apt install git
 sudo apt install make
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 
-# Clone, test, and run
-GIT_SSH_COMMAND='ssh -i ~/.ssh/keyForGit' git clone git@github.com:m0b1d3v/ansible.git
-cd ansible
+# Test and run
 make check
 make ansible
 ```
