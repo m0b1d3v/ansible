@@ -5,6 +5,6 @@
   include_tasks: local.yml
   when: inventory_hostname in groups["local"]
 
-- name: Server
-  include_tasks: server.yml
-  when: inventory_hostname in groups["server"]
+- name: Remote
+  include_tasks: remote.yml
+  when: inventory_hostname in groups["remote"]

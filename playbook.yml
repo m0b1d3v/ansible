@@ -12,9 +12,9 @@
   roles:
     - local
 
-# Remote server setup
+# Remote machines setup
 - become: yes
   hosts:
-    - server
+    - remote
   roles:
-    - server
+    - remote

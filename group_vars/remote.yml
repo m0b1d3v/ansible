@@ -1,9 +1,9 @@
-server:
+remote:
 
   apt:
-    - fail2ban
-    - ntp
-    - ufw
+    - name: fail2ban
+    - name: ntp
+    - name: ufw
 
   directories:
     private: []

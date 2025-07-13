@@ -1,6 +1,6 @@
 # Ansible
 
-Desktop and server provisioning.
+Local and remote machine provisioning.
 
 The directory layout of all my Ansible code comes from [best practice suggestions](https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html#directory-layout).
 Notable exceptions to the best practices:
