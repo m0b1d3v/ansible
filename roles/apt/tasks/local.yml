@@ -15,3 +15,9 @@
     name: "{{ item.name }}"
     state: "{{ item.state | default ('present') }}"
   loop: "{{ local.apt }}"
+
+- name: Directly install deb packages from Internet on local machines
+  apt:
+    deb: "{{ item.url }}"
+    state: "{{ item.state | default ('present') }}"
+  loop: "{{ local.apt_deb }}"

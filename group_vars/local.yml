@@ -4,6 +4,10 @@ local:
     - name: flatpak
     - name: mullvad-vpn
     - name: syncthing
+
+  apt_deb:
+    - url: https://discord.com/api/download?platform=linux&format=deb
+
   apt_key:
 
     - url: https://syncthing.net/release-key.gpg
