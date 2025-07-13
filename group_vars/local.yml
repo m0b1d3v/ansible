@@ -13,5 +13,6 @@ local:
   flatpak_remote:
     - { name: flathub, url: https://dl.flathub.org/repo/flathub.flatpakrepo }
 
-  flatpak: []
+  flatpak:
+    - name: org.keepassxc.KeePassXC
 
