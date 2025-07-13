@@ -1,8 +1,6 @@
 all:
 
   apt:
-
-  deb: []
     - name: curl
     - name: dos2unix
     - name: git

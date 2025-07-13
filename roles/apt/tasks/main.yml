@@ -1,9 +1,3 @@
-
-- name: Install deb
-  apt:
-    deb: "{{ item }}"
-    state: present
-  loop: "{{ all.deb }}"
 - name: All
   include_tasks: all.yml
 
