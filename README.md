@@ -29,7 +29,7 @@ make ansible
 
 ## New server manual setup checklist
 
-```bash
+```shell
 # Add provisioning user
 ssh <server>
 adduser <user>
