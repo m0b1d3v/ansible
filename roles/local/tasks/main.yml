@@ -5,7 +5,7 @@
   include_tasks: flatpak.yml
 
 - name: Fly
-  include_tasks: fly.yml
+  include_tasks: fly-io.yml
 
 - name: Node
   include_tasks: node.yml
