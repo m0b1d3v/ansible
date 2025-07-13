@@ -1,3 +1,11 @@
 local:
 
-  apt: []
+  apt:
+    - name: mullvad-vpn
+  apt_key:
+    - url: https://repository.mullvad.net/deb/mullvad-keyring.asc
+      dest: /usr/share/keyrings/mullvad-keyring.asc
+
+  apt_repository:
+    - name: "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=amd64] https://repository.mullvad.net/deb/stable stable main"
+

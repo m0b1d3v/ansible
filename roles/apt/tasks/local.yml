@@ -1,5 +1,17 @@
-- name: Install packages
+- name: Add package manager keys
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+  loop: "{{ local.apt_key }}"
+
+- name: Add package manager repositories
+  apt_repository:
+    repo: "{{ item.name }}"
+    state: "{{ item.state | default ('present') }}"
+  loop: "{{ local.apt_repository }}"
+
+- name: Manage packages with apt on local machines
   apt:
-    name: "{{ item }}"
-    state: present
+    name: "{{ item.name }}"
+    state: "{{ item.state | default ('present') }}"
   loop: "{{ local.apt }}"
