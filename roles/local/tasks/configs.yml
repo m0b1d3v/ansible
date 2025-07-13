@@ -1,0 +1,9 @@
+- name: SSH config
+  template:
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
+    src: "ssh_config.j2"
+
+- name: Bash config
+  template:
+    dest: "{{ ansible_env.HOME }}/.bash_aliases"
+    src: "bashrc_additions.j2"

@@ -1,12 +1,6 @@
-- name: SSH config
-  template:
-    dest: "{{ ansible_env.HOME }}/.ssh/config"
-    src: "ssh_config.j2"
+- name: Configs
+  include_tasks: configs.yml
 
-- name: Bash config
-  template:
-    dest: "{{ ansible_env.HOME }}/.bash_aliases"
-    src: "bashrc_additions.j2"
 
 - name: Fly
   include_tasks: fly.yml
