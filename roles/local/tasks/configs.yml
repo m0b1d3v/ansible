@@ -7,3 +7,12 @@
   template:
     dest: "{{ ansible_env.HOME }}/.bash_aliases"
     src: "bashrc_additions.j2"
+
+- name: Grub config
+  become: true
+  template:
+    dest: "/etc/default/grub"
+    src: "grub.j2"
+    backup: true
+  notify:
+    - Update grub
